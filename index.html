@@ -1,7 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Dental Practice Management - Spear Education</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <style>
+        .gradient-header {
+            background: linear-gradient(to right, #2563eb, #1e40af);
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="gradient-header text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Mastering Dental Practice Management</h1>
+            <p class="text-xl md:text-2xl mb-8">Unlock the Potential of Your Dental Practice</p>
+            <button class="bg-white text-blue-800 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg inline-flex items-center">
+                Explore More Techniques
+                <i data-feather="chevron-right" class="ml-2 h-4 w-4"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Key Topics Section -->
+    <section class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Essential Management Strategies</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Patient Relationship Management -->
+            <div class="card bg-white p-6 rounded-lg shadow-md text-center">
+                <i data-feather="users" class="h-6 w-6 mx-auto mb-4 text-blue-600"></i>
+                <h3 class="text-xl font-semibold mb-3">Patient Relationship Management</h3>
+                <p class="text-gray-600">Build lasting patient relationships through effective communication and personalized care strategies.</p>
+            </div>
+
+            <!-- Financial Optimization -->
+            <div class="card bg-white p-6 rounded-lg shadow-md text-center">
+                <i data-feather="dollar-sign" class="h-6 w-6 mx-auto mb-4 text-blue-600"></i>
+                <h3 class="text-xl font-semibold mb-3">Financial Optimization</h3>
+                <p class="text-gray-600">Maximize practice profitability through smart financial planning and revenue cycle management.</p>
+            </div>
+
+            <!-- Team Leadership -->
+            <div class="card bg-white p-6 rounded-lg shadow-md text-center">
+                <i data-feather="user-check" class="h-6 w-6 mx-auto mb-4 text-blue-600"></i>
+                <h3 class="text-xl font-semibold mb-3">Team Leadership</h3>
+                <p class="text-gray-600">Develop strong leadership skills to build and maintain high-performing dental teams.</p>
+            </div>
+
+            <!-- Workflow Efficiency -->
+            <div class="card bg-white p-6 rounded-lg shadow-md text-center">
+                <i data-feather="clock" class="h-6 w-6 mx-auto mb-4 text-blue-600"></i>
+                <h3 class="text-xl font-semibold mb-3">Workflow Efficiency</h3>
+                <p class="text-gray-600">Streamline operations and optimize scheduling to enhance practice productivity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Transform Your Practice</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold mb-4">Enhanced Profitability</h3>
+                    <p class="text-gray-600">Optimize operations and financial management to increase revenue and reduce costs</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold mb-4">Patient Satisfaction</h3>
+                    <p class="text-gray-600">Create exceptional patient experiences that lead to higher retention and referrals</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold mb-4">Team Excellence</h3>
+                    <p class="text-gray-600">Build and maintain a high-performing team that delivers outstanding patient care</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Success Stories</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="card bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic mb-4">"Implementing these management strategies transformed our practice. Our patient satisfaction scores increased by 40% in just six months."</p>
+                <p class="font-semibold">Dr. Sarah Chen, DDS</p>
+                <p class="text-gray-500">Brightsmile Dental Care</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic mb-4">"The team leadership techniques helped us build a more cohesive staff culture, resulting in better patient care and increased retention."</p>
+                <p class="font-semibold">Dr. Michael Roberts, DMD</p>
+                <p class="text-gray-500">Advanced Dental Solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating AI Assistant Button -->
+    <button class="floating-button bg-blue-600 hover:bg-blue-700 text-white rounded-full h-16 w-16 flex items-center justify-center shadow-lg">
+        <i data-feather="message-circle" class="h-6 w-6"></i>
+    </button>
+
+    <!-- ElevenLabs Widget -->
     <elevenlabs-convai agent-id="c4kBc8bWxJW83tsC9t7K"></elevenlabs-convai>
     <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+
+    <script>
+        // Initialize Feather Icons
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+        });
+    </script>
 </body>
 </html>
