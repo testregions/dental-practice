@@ -10,6 +10,12 @@
         .gradient-header {
             background: linear-gradient(to right, #2563eb, #1e40af);
         }
+        .floating-button {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 1000;
+        }
         .card {
             transition: all 0.3s ease;
         }
@@ -25,9 +31,9 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Mastering Dental Practice Management</h1>
             <p class="text-xl md:text-2xl mb-8">Unlock the Potential of Your Dental Practice</p>
-            <button id="assistantButton" class="bg-white text-blue-800 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg inline-flex items-center">
-                <i data-feather="message-circle" class="mr-2 h-5 w-5"></i>
-                Spear Practice Assistant
+            <button class="bg-white text-blue-800 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg inline-flex items-center">
+                Explore More Techniques
+                <i data-feather="chevron-right" class="ml-2 h-4 w-4"></i>
             </button>
         </div>
     </header>
@@ -104,35 +110,19 @@
         </div>
     </section>
 
-    <!-- Hidden ElevenLabs Widget Container -->
-    <div id="widgetContainer" style="display: none;">
-        <elevenlabs-convai agent-id="c4kBc8bWxJW83tsC9t7K"></elevenlabs-convai>
-    </div>
+    <!-- Floating AI Assistant Button (Now in top right) -->
+    <button class="floating-button bg-blue-600 hover:bg-blue-700 text-white rounded-full h-16 w-16 flex items-center justify-center shadow-lg">
+        <i data-feather="message-circle" class="h-6 w-6"></i>
+    </button>
 
-    <!-- Scripts -->
+    <!-- ElevenLabs Widget -->
+    <elevenlabs-convai agent-id="c4kBc8bWxJW83tsC9t7K"></elevenlabs-convai>
     <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+
     <script>
         // Initialize Feather Icons
         document.addEventListener('DOMContentLoaded', function() {
             feather.replace();
-
-            // Get button and widget container
-            const assistantButton = document.getElementById('assistantButton');
-            const widgetContainer = document.getElementById('widgetContainer');
-
-            // Add click event listener to button
-            assistantButton.addEventListener('click', function() {
-                // Toggle widget visibility
-                if (widgetContainer.style.display === 'none') {
-                    widgetContainer.style.display = 'block';
-                    // Initialize widget if needed
-                    if (window.ElevenLabs && typeof window.ElevenLabs.init === 'function') {
-                        window.ElevenLabs.init();
-                    }
-                } else {
-                    widgetContainer.style.display = 'none';
-                }
-            });
         });
     </script>
 </body>
